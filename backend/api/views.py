@@ -49,6 +49,7 @@ def api_home(request, *args, **kwargs):
 
         serializer.is_valid(raise_exception=True)
         instance = serializer.save()
+        serializer = ProductSerializer(instance)
         data = serializer.data
 
     return Response(data, status=200)
