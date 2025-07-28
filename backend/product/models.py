@@ -3,7 +3,7 @@ from decimal import Decimal
 
 # Create your models here.
 class Product(models.Model):
-    title = models.CharField(max_length=10)
+    title = models.CharField(max_length=60)
     content = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=3, default=99.99)
 
